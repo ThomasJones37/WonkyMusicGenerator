@@ -3,59 +3,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="./style.css">
+    
     <link rel="icon" href="./img/ico.png">
     <title>Wonky Music Generator</title>
 </head>
-<header>Wonky Music Generator</header>
-<body>
 
-    <span id="warning"></span>
+<body >
+
+<div id="headerWrapper">
+    <header>Music Generator</header>
+    <img src="./img/ico.png" id="menu" class="img_size">
+  
+</div>
+<span id="warning">Fill out & press play !</span>
+
+<div id="menuShownTop">
+    <div>How to</div>
+    <span>Fill each input with a value in seconds,<br>press play & relax<br><br></span>
+    <span class="modit">Don't forget to check out the cycle length !</span>
+    <div>What's happening ?</div>
+    <span>Each input represents a note. By filling in each input, you're telling each note how often it'll be repeated.<br>You're controlling the most important parameter of this musical piece !<br><br></span>
+    <span>Each time you press play, the key changes, the notes change, but they always go together<br>They're twelve keys and they're chosen at random each time</span>
+    <div>My recommendations & tips</div>
+    <ul>
+        <li>Use a minimum value of 0.5s</li>
+        <li>Don't go to big !</li>
+        <li>Increment in quarters (+- 0.25 / 0.5 / 0.75)</li>
+        <li>Use same values twice or more !</li>
+        <li></li>
+        <li>All this will help the result stay musical !</li>
+    </ul>
+    
+    
+    <img src="./img/keys.png" class="img_size" id="instr"><br>
+    <img src="./img/up.png" class="img_size" id="up"><br>
+    <img src="./img/up.png" class="img_size" id="leftMenu"> 
+</div>
+<div id="menuShownLeft">
+    <img src="./img/up.png" class="img_size" id="rightMenu"> 
+    <div>Extra tips</div>
+    <ul>
+        <li>Divide smaller than a 1/4 second. Try 1.125 or 5.625</li>
+        <li></li>
+        <li>Try <em>really</em> small increments (ex: 1.50s to 1.501s)</li>
+        <li></li>
+        <li>Try to make the cycle length <em>longer</em> that mankind and reflect</li>
+        <li></li>
+    
+    </ul>
+    <div>Sample Settings</div>
+    <p>(click on one to set it)<br></p>
+    <ul>
+        <li class="setting"><b>Slow chords :</b></li>
+        <li><em>12 / 11 / 12 / 11 / 12 / 1.5 / 0.75 / 1.25</em></li>
+        <li></li>
+        <li class="setting"><b>Soft phase :</b></li>
+        <li><em>2.5 / 3 / 2 / 3 / 2 / 3.01 / 2.01 / 2.501</em></li>
+        <li></li>
+        <li class="setting"><b>Minor 6th run :</b></li>
+        <li><em>3.125 / 2 / 6.375 / 2.5 / 2.25 / 6.125 / 2 / 3</em></li>
+        <li></li>
+        <li class="setting"><b>Infinity phasing :</b></li>
+        <li><em>1.25 / 0.501 / 0.5 / 1 / 1.25 / 0.501 / 0.5 / 1.5</em></li>
+    </ul>
+</div>
+
 <div id="wrapper">
 
-    <audio src="" id="click1" class="sound"></audio>
-    <audio src="" id="click2" class="sound"></audio>
-    <audio src="" id="click3" class="sound"></audio>
-    <audio src="" id="click4" class="sound"></audio>
-    <audio src="" id="click5" class="sound"></audio>
-    <audio src="" id="click6" class="sound"></audio>
-    <audio src="" id="click7" class="sound"></audio>
-    <audio src="" id="click8" class="sound"></audio>
-
+    <input type="number" name="inputone" id="input1" class="input" placeholder="Enter time" value="1" >
+    <input type="number" name="inputtwo" id="input2" class="input" placeholder="in seconds"value="2">
     
-
-    <input type="number" name="inputone" id="input1" class="input" placeholder="Enter time ">
-    <input type="number" name="inputtwo" id="input2" class="input" placeholder="in seconds">
+    <input type="number" name="inputthree" id="input3" class="input"placeholder="a different value"value="1">
+    <input type="number" name="inputfour" id="input4" class="input"placeholder="for each one.."value="2">
     
+    <input type="number" name="inputfive" id="input5" class="input"placeholder="Numbers with"value="3">
+    <input type="number" name="inputsix" id="input6" class="input"placeholder="0.25 increments are nice"value="4">
 
-    <input type="number" name="inputthree" id="input3" class="input"placeholder="a different value">
-    <input type="number" name="inputfour" id="input4" class="input"placeholder="for each one..">
-    
-    
-
-    <input type="number" name="inputfive" id="input5" class="input"placeholder="Whole numbers">
-    <input type="number" name="inputsix" id="input6" class="input"placeholder="or fractions..">
-
-    <input type="number" name="inputfive" id="input7" class="input"placeholder="It's up">
-    <input type="number" name="inputsix" id="input8" class="input"placeholder="to you..">
-    
+    <input type="number" name="inputfive" id="input7" class="input"placeholder="It's up"value="3">
+    <input type="number" name="inputsix" id="input8" class="input"placeholder="to you.."value="4">
 </div>
+
 <div id="controls">
+    
     <img src="./img/pp.png" id="play" class="img_size">
-    <span id="totalTime">0 seconds to full cycle</span>
+
 </div>  
+
 <div class="timer">
-    <div id="hours">0 hours</div>
+    <div id="totalTime">How long will it take to cycle back ?</div><br>
+
+    <span id="hours">0 hours</span>
     <span id="minutes">0 minutes</span>
     <span id="seconds">0 seconds</span>
-    
 
-
+    <div id="showMoreBox">
+        <img id="showMore" src="./img/up.png">
+        <div>[more info]</div>
+        <br><br>
+    </div>
 </div> 
+<div id="menuShownInfo">
+    <div id="spacerInfo"></div>
+    <div>For a whole cycle :</div>
+    <br>
+    <div class="info"></div>
+    <div class="info"></div>
+    <div class="info"></div>
+    <div class="info"></div>
+    <div class="info"></div>
+    <div class="info"></div>
+    <div class="info"></div>
+    <div class="info"></div>
+    <img src="./img/up.png" id="showMore2">
+    
+    
+</div>
 
+<img src="./img/bulb.png" id="switch" class="img_size">
+<span class="sig">Thomas Jones // Tea Leaves</span>
 
+<audio src="" id="click1" class="sound"></audio>
+<audio src="" id="click2" class="sound"></audio>
+<audio src="" id="click3" class="sound"></audio>
+<audio src="" id="click4" class="sound"></audio>
+<audio src="" id="click5" class="sound"></audio>
+<audio src="" id="click6" class="sound"></audio>
+<audio src="" id="click7" class="sound"></audio>
+<audio src="" id="click8" class="sound"></audio>
 
 </body>
 
 <script src="./main.js"> </script>
+
+<script src="./menu.js"> </script>
 
 </html>
