@@ -304,6 +304,16 @@ function keyChooser(){
     sound6.src = sourceNotes[5]
     sound7.src = sourceNotes[6]
     sound8.src = sourceNotes[7]
+    
+    sound1.load()
+    sound2.load()
+    sound3.load()
+    sound4.load()
+    sound5.load()
+    sound6.load()
+    sound7.load()
+    sound8.load()
+
 }
 function start(){
     
